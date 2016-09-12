@@ -42,7 +42,7 @@ public class DBOps {
 			stat1.setString(5, ques.getOption4()); 
 			stat1.setString(6, ques.getAnswer());
 			stat1.setString(6, ques.getSubject());
-			stat1.setString(6, ques.getDifficulty_level());
+			stat1.setString(6, ques.getDifficultyLevel());
 			stat1.executeUpdate();
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block

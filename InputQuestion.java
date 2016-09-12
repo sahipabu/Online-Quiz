@@ -12,7 +12,7 @@ public class InputQuestion {
 	protected String option4 = new String();
 	protected String answer = new String();
 	protected String subject = new String();
-	protected String difficulty_level = new String();		
+	protected String difficultyLevel = new String();		
 	
 	public String getQuestion() {
 		return question;
@@ -42,8 +42,8 @@ public class InputQuestion {
 		return subject;
 	}
 
-	public String getDifficulty_level() {
-		return difficulty_level;
+	public String getDifficultyLevel() {
+		return difficultyLevel;
 	}
 
 	public InputQuestion(){
@@ -80,7 +80,7 @@ public class InputQuestion {
 			//System.out.println(answer);
 			
 			System.out.print("Difficulty Level: ");
-			difficulty_level = br.readLine();
+			difficultyLevel = br.readLine();
 			//System.out.println(answer);
 	
 		} catch (IOException e) {

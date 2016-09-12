@@ -31,7 +31,7 @@ public class InterfaceHandler {
 				System.out.print("Do you want to add another question? ");
 				String answer = br.readLine();
 				System.out.println(answer);
-				if(answer.equals("y"))
+				if(answer.equals("y") || answer.equals("Y"))
 					more = true;
 				else{
 					more = false;
