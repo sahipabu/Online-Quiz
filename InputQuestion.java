@@ -3,6 +3,9 @@ package com.onlinequiz;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class InputQuestion {
 	protected String question = new String();
@@ -89,5 +92,22 @@ public class InputQuestion {
 		}
 		
 
+	}
+	
+	public void addToDB(InputQuestion ques, Connection conn) throws ClassNotFoundException, SQLException{
+		
+		String query = "INSERT INTO Questions_Database VALUES(?,?,?,?,?,?,?,?)";
+		
+		PreparedStatement stat1 = conn.prepareStatement(query);
+		
+		stat1.setString(1, ques.getQuestion()); 
+		stat1.setString(2, ques.getOption1()); 
+		stat1.setString(3, ques.getOption2()); 
+		stat1.setString(4, ques.getOption3()); 
+		stat1.setString(5, ques.getOption4()); 
+		stat1.setString(6, ques.getAnswer());
+		stat1.setString(7, ques.getSubject());
+		stat1.setString(8, ques.getDifficultyLevel());
+		stat1.executeUpdate();
 	}
 }
